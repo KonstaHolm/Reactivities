@@ -32,7 +32,12 @@ export default observer(function ActivityDashboard() {
                   <ActivityListItemPlaceholder />
                </>
             ) : (
-               <InfiniteScroll pageStart={0} loadMore={handleGetNext} hasMore={!loadingNext && !!pagination && pagination.currentPage < pagination.totalPages} initialLoad={false}>
+               <InfiniteScroll
+                  pageStart={0}
+                  loadMore={handleGetNext}
+                  hasMore={!loadingNext && !!pagination && pagination.currentPage < pagination.totalPages}
+                  initialLoad={false}
+               >
                   <ActivityList />
                </InfiniteScroll>
             )}
